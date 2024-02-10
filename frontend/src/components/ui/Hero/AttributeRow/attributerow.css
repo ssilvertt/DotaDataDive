@@ -1,0 +1,3 @@
+.stats-text{
+	@apply leading-7 font-reaver font-bold text-gray-200 text-lg;
+}
