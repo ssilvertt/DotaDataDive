@@ -17,29 +17,37 @@ import {
 interface DataTableProps<TData, TValue> {
 	columns: ColumnDef<TData, TValue>[];
 	data: TData[];
+	role: string;
 }
 
 export function DataTable<TData, TValue>({
 	columns,
 	data,
+	role,
 }: DataTableProps<TData, TValue>) {
 	const table = useReactTable({
 		data,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
+		defaultColumn: {
+			size: 200, //starting column size
+			minSize: 50, //enforced during column resizing
+			maxSize: 500, //enforced during column resizing
+		},
 	});
+	console.log(role);
 
 	return (
-		<div className='rounded-md border'>
-			<Table>
+		<div className='w-auto'>
+			<Table className='border mx-auto '>
 				<TableHeader>
 					{table.getHeaderGroups().map(headerGroup => (
 						<TableRow key={headerGroup.id}>
 							{headerGroup.headers.map(header => {
 								return (
-									<TableHead key={header.id}>
+									<TableHead key={header.id} className=''>
 										{header.isPlaceholder
-											? null
+											? 	null
 											: flexRender(
 													header.column.columnDef.header,
 													header.getContext()
@@ -58,7 +66,7 @@ export function DataTable<TData, TValue>({
 								data-state={row.getIsSelected() && 'selected'}
 							>
 								{row.getVisibleCells().map(cell => (
-									<TableCell key={cell.id}>
+									<TableCell key={cell.id} className=''>
 										{flexRender(cell.column.columnDef.cell, cell.getContext())}
 									</TableCell>
 								))}

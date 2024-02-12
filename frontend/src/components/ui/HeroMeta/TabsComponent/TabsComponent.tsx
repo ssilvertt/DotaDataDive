@@ -9,25 +9,25 @@ interface TabsComponentProps {
 
 const TabsComponent = ({ sortedData }: TabsComponentProps) => {
 	const renderContent = (value: string) => {
-		return <DataTable columns={columns} data={sortedData} />
+		return <DataTable columns={columns} data={sortedData} role='value' />
 	};
 
 	return (
-		<Tabs defaultValue='overall' className='w-full'>
+		<Tabs defaultValue='ALL' className='w-full'>
 			<TabsList className='flex flex-row w-full bg-background'>
-				<TabsTrigger value='overall'>Overall</TabsTrigger>
-				<TabsTrigger value='carry'>Carry</TabsTrigger>
-				<TabsTrigger value='mid'>Mid</TabsTrigger>
-				<TabsTrigger value='offlane'>Offlane</TabsTrigger>
-				<TabsTrigger value='softsupp'>Soft support</TabsTrigger>
-				<TabsTrigger value='fullsupp'>Full support</TabsTrigger>
+				<TabsTrigger value='ALL'>Overall</TabsTrigger>
+				<TabsTrigger value='POSITION_1'>Carry</TabsTrigger>
+				<TabsTrigger value='POSITION_2'>Mid</TabsTrigger>
+				<TabsTrigger value='POSITION_3'>Offlane</TabsTrigger>
+				<TabsTrigger value='POSITION_4'>Soft support</TabsTrigger>
+				<TabsTrigger value='POSITION_5'>Full support</TabsTrigger>
 			</TabsList>
-			<TabsContent value='overall'>{renderContent('overall')}</TabsContent>
-			<TabsContent value='carry'>{renderContent('carry')}</TabsContent>
-			<TabsContent value='mid'>{renderContent('mid')}</TabsContent>
-			<TabsContent value='offlane'>{renderContent('offlane')}</TabsContent>
-			<TabsContent value='softsupp'>{renderContent('softsupp')}</TabsContent>
-			<TabsContent value='fullsupp'>{renderContent('fullsupp')}</TabsContent>
+			<TabsContent value='ALL'><DataTable columns={columns} data={sortedData} role='value' /></TabsContent>
+			<TabsContent value='POSITION_1'>{renderContent('POSITION_1')}</TabsContent>
+			<TabsContent value='POSITION_2'>{renderContent('POSITION_2')}</TabsContent>
+			<TabsContent value='POSITION_3'>{renderContent('POSITION_3')}</TabsContent>
+			<TabsContent value='POSITION_4'>{renderContent('POSITION_4')}</TabsContent>
+			<TabsContent value='POSITION_5'>{renderContent('POSITION_5')}</TabsContent>
 		</Tabs>
 	);
 };
