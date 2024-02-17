@@ -1,5 +1,4 @@
-import { gql } from '@apollo/client'
-
+import { gql } from '@apollo/client';
 export const GET_HEROES = gql`
 	query {
 		constants {
@@ -38,12 +37,12 @@ export const GET_HEROES = gql`
 			}
 		}
 	}
-`
+`;
 
 export const GET_META = gql`
 	query {
 		heroStats {
-			winWeek(take: 1, positionIds: POSITION_2) {
+			winWeek(take: 1) {
 				week
 				heroId
 				winCount
@@ -51,4 +50,4 @@ export const GET_META = gql`
 			}
 		}
 	}
-`
+`;

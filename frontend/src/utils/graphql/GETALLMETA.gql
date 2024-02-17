@@ -1,0 +1,10 @@
+query GETALLMETA($positionIds: String!) {
+	heroStats {
+		winWeek(take: 1, positionIds: $positionIds) {
+			week
+			heroId
+			winCount
+			matchCount
+		}
+	}
+}

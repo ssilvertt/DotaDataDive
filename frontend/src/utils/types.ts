@@ -88,3 +88,15 @@ export interface GetMetaResult {
 export interface QueryResult {
 	constants: Constants;
 }
+
+
+export enum MatchPlayerPositionType {
+  All = 'ALL',
+  Filtered = 'FILTERED',
+  Position_1 = 'POSITION_1',
+  Position_2 = 'POSITION_2',
+  Position_3 = 'POSITION_3',
+  Position_4 = 'POSITION_4',
+  Position_5 = 'POSITION_5',
+  Unknown = 'UNKNOWN'
+}

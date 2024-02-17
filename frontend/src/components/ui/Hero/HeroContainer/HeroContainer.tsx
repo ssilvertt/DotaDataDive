@@ -20,25 +20,4 @@ const HeroContainer = styled('div').withConfig({
     z-index: -1;
   }
 `;
-
-// const HeroContainer = styled('div').withConfig({
-//   shouldForwardProp: (prop) => !['heroBg'].includes(prop),
-// })<{heroBg: string}>`
-// display: flex;
-// justify-content: center;
-// //   height: 100%;
-// //   &::before {
-// //     background-size: cover;
-// //     content: '';
-// //     position: absolute;
-// //     top: 0;
-// //     left: 0;
-// //     width: 100%;
-// //     height: 100%;
-// //     background-image: ${props => props.heroBg};
-// //     filter: blur(6px) saturate(1.3);
-// //     z-index: -1;
-// //   }
-// ` ;
-
 export default HeroContainer

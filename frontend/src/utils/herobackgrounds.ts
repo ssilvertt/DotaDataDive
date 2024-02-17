@@ -127,7 +127,7 @@ type HeroLoadoutBackground = {
 };
 
 const heroLoadoutBackground: HeroLoadoutBackground = {
-	abaddon: ["radial-gradient(circle at 50% 0%, rgba(23, 18, 58, 0.8), rgba(12, 19, 31))", '/src/assets/hero-backgrounds/loadout_bg_outworld_003_jpg.jpeg'],
+	abaddon: ["radial-gradient(circle at 50% 0%, rgba(23, 18, 58, 0.8), rgba(12, 19, 31))", '/assets/hero-backgrounds/loadout_bg_rocky_001_jpg.jpeg'],
   alchemist: ["radial-gradient(circle at 50% 0%, rgba(29, 19, 54, 0.8), rgba(12, 8, 21))", '/src/assets/hero-backgrounds/loadout_bg_rocky_001_jpg.jpeg'],
   ancient_apparition: ["radial-gradient(circle at 50% 0%, rgba(24, 35, 70, 0.8), rgba(8, 19, 21))", '/src/assets/hero-backgrounds/loadout_bg_ice_001_jpg.jpeg'],
   antimage: ["radial-gradient(circle at 50% 0%, rgba(35, 25, 48, 0.8), rgba(8, 11, 25))", '/src/assets/hero-backgrounds/loadout_bg_outworld_001_jpg.jpeg'],

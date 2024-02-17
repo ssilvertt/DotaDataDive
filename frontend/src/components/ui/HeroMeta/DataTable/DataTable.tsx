@@ -17,25 +17,18 @@ import {
 interface DataTableProps<TData, TValue> {
 	columns: ColumnDef<TData, TValue>[];
 	data: TData[];
-	role: string;
 }
 
 export function DataTable<TData, TValue>({
 	columns,
 	data,
-	role,
 }: DataTableProps<TData, TValue>) {
+	
 	const table = useReactTable({
 		data,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
-		defaultColumn: {
-			size: 200, //starting column size
-			minSize: 50, //enforced during column resizing
-			maxSize: 500, //enforced during column resizing
-		},
 	});
-	console.log(role);
 
 	return (
 		<div className='w-auto'>

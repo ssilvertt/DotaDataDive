@@ -1,12 +1,29 @@
-import { useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
+import { useMemo, useState } from 'react';
 import { GET_META } from '../queries';
-import { GetMetaResult, MetaHero } from '../types';
-import { useMemo } from 'react';
+import { GetMetaResult, MatchPlayerPositionType, MetaHero } from '../types';
 import useHeroes from './useHeroes';
-import { Separator } from "@/components/ui/separator"
 
-const useMeta = () => {
-	const { loading, error, data } = useQuery<GetMetaResult>(GET_META);
+const GET_ALL_META = gql(`
+query GET_ALL_META($positionIds: [MatchPlayerPositionType]){
+	heroStats {
+		winWeek(take: 1, positionIds: $positionIds) {
+			week
+			heroId
+			winCount
+			matchCount
+		}
+	}
+}
+`);
+
+const useMeta = (initialPos:MatchPlayerPositionType) => {
+	const { loading, error } = useQuery<GetMetaResult>(GET_META);
+	
+	const { data } = useQuery(GET_ALL_META, { variables: { positionIds: initialPos }});
+	
+	
+
 	const { heroes } = useHeroes();
 	const meta = data?.heroStats?.winWeek ?? [];
 	const combinedData: MetaHero[] = useMemo(() => {
@@ -31,7 +48,6 @@ const useMeta = () => {
 		}
 		return combined;
 	}, [heroes, meta, loading]);
-	
 
 	return { loading, error, meta, combinedData };
 };
