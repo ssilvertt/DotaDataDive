@@ -1,6 +1,5 @@
 import { MetaHero } from '@/utils/types';
 import { ColumnDef } from '@tanstack/react-table';
-
 export const columns: ColumnDef<MetaHero>[] = [
 	{
 		id: 'row',
@@ -27,7 +26,16 @@ export const columns: ColumnDef<MetaHero>[] = [
 	},
 	{
 		accessorKey: 'winRate',
-		header: 'Winrate',
+		header: ({ column }) => {
+			return (
+				<a
+					className='hover:brightness-200 cursor-pointer'
+					onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+				>
+					Winrate
+				</a>
+			);
+		},
 		cell: ({ row }) => {
 			const winRate = row.original.winRate ? Number(row.original.winRate) : 0;
 			return (
@@ -39,6 +47,15 @@ export const columns: ColumnDef<MetaHero>[] = [
 	},
 	{
 		accessorKey: 'matchCount',
-		header: 'Matches',
+		header: ({ column }) => {
+			return (
+				<a
+					className='hover:brightness-200 cursor-pointer'
+					onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+				>
+					Matches
+				</a>
+			);
+		},
 	},
 ];
