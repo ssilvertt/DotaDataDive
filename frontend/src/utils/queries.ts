@@ -51,3 +51,16 @@ export const GET_META = gql`
 		}
 	}
 `;
+
+export const GET_ALL_META = gql`
+query GET_ALL_META($positionIds: [MatchPlayerPositionType]){
+	heroStats {
+		winWeek(take: 1, positionIds: $positionIds) {
+			week
+			heroId
+			winCount
+			matchCount
+		}
+	}
+}
+`;

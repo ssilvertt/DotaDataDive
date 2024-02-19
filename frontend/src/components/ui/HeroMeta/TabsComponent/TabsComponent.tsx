@@ -1,31 +1,11 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import useMeta from '@/utils/hooks/useMeta';
-import { MatchPlayerPositionType, MetaHero } from '@/utils/types';
-import { useState } from 'react';
+import { MatchPlayerPositionType } from '@/utils/types';
 import { columns } from '../DataTable/Columns';
 import { DataTable } from '../DataTable/DataTable';
 
 const TabsComponent = () => {
-	const [activeTab, setActiveTab] = useState(MatchPlayerPositionType.All);
-	const { loading, error, combinedData } = useMeta(activeTab);
-
-	const sortedData: MetaHero[] = combinedData.sort((a, b) => {
-		const winRateA = Number(a.winRate) ?? -Infinity;
-		const winRateB = Number(b.winRate) ?? -Infinity;
-		return winRateB - winRateA;
-	});
-
-	const tabChange = event => {
-		console.log(event);
-		setActiveTab(event);
-	};
-
 	return (
-		<Tabs
-			defaultValue={MatchPlayerPositionType.All}
-			className='w-full'
-			onValueChange={tabChange}
-		>
+		<Tabs defaultValue={MatchPlayerPositionType.All} className='w-full'>
 			<TabsList className='flex flex-row w-full bg-background'>
 				<TabsTrigger value={MatchPlayerPositionType.All}>Overall</TabsTrigger>
 				<TabsTrigger value={MatchPlayerPositionType.Position_1}>
@@ -45,22 +25,37 @@ const TabsComponent = () => {
 				</TabsTrigger>
 			</TabsList>
 			<TabsContent value={MatchPlayerPositionType.All}>
-				<DataTable columns={columns} data={sortedData}/>
+				<DataTable columns={columns} position={MatchPlayerPositionType.All} />
 			</TabsContent>
 			<TabsContent value={MatchPlayerPositionType.Position_1}>
-				<DataTable columns={columns} data={sortedData}/>
+				<DataTable
+					columns={columns}
+					position={MatchPlayerPositionType.Position_1}
+				/>
 			</TabsContent>
 			<TabsContent value={MatchPlayerPositionType.Position_2}>
-				<DataTable columns={columns} data={sortedData}/>
+				<DataTable
+					columns={columns}
+					position={MatchPlayerPositionType.Position_2}
+				/>
 			</TabsContent>
 			<TabsContent value={MatchPlayerPositionType.Position_3}>
-				<DataTable columns={columns} data={sortedData}/>
+				<DataTable
+					columns={columns}
+					position={MatchPlayerPositionType.Position_3}
+				/>
 			</TabsContent>
 			<TabsContent value={MatchPlayerPositionType.Position_4}>
-				<DataTable columns={columns} data={sortedData}/>
+				<DataTable
+					columns={columns}
+					position={MatchPlayerPositionType.Position_4}
+				/>
 			</TabsContent>
 			<TabsContent value={MatchPlayerPositionType.Position_5}>
-				<DataTable columns={columns} data={sortedData}/>
+				<DataTable
+					columns={columns}
+					position={MatchPlayerPositionType.Position_5}
+				/>
 			</TabsContent>
 		</Tabs>
 	);
