@@ -1,14 +1,4 @@
 import {
-	ColumnDef,
-	SortingState,
-	flexRender,
-	getCoreRowModel,
-	getSortedRowModel,
-	useReactTable,
-} from '@tanstack/react-table';
-import * as React from 'react';
-
-import {
 	Table,
 	TableBody,
 	TableCell,
@@ -18,6 +8,17 @@ import {
 } from '@/components/ui/table';
 import useMeta from '@/utils/hooks/useMeta';
 import { MatchPlayerPositionType, MetaHero } from '@/utils/types';
+import {
+	ColumnDef,
+	SortingState,
+	flexRender,
+	getCoreRowModel,
+	getSortedRowModel,
+	useReactTable,
+} from '@tanstack/react-table';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Spinner from '../../spinner';
 interface DataTableProps<TValue> {
 	columns: ColumnDef<MetaHero, TValue>[];
 	position: MatchPlayerPositionType;
@@ -27,7 +28,10 @@ export function DataTable<TValue>({
 	columns,
 	position,
 }: DataTableProps<TValue>) {
-	const [sorting, setSorting] = React.useState<SortingState>([]);
+	const [sorting, setSorting] = useState<SortingState>([
+		{ id: 'winRate', desc: true },
+		{ id: 'matchCount', desc: true },
+	]);
 	const { loading, error, combinedData } = useMeta(position);
 	const table = useReactTable({
 		data: combinedData,
@@ -46,6 +50,7 @@ export function DataTable<TValue>({
 				<TableHeader>
 					{table.getHeaderGroups().map(headerGroup => (
 						<TableRow key={headerGroup.id}>
+							<TableHead></TableHead>
 							{headerGroup.headers.map(header => {
 								return (
 									<TableHead key={header.id} className=''>
@@ -63,22 +68,25 @@ export function DataTable<TValue>({
 				</TableHeader>
 				<TableBody>
 					{table.getRowModel().rows?.length ? (
-						table.getRowModel().rows.map(row => (
+						table.getRowModel().rows.map((row, index) => (
 							<TableRow
 								key={row.id}
 								data-state={row.getIsSelected() && 'selected'}
 							>
+								<TableCell className='w-[2px]'>{index + 1}</TableCell>
 								{row.getVisibleCells().map(cell => (
 									<TableCell key={cell.id} className=''>
-										{flexRender(cell.column.columnDef.cell, cell.getContext())}
+										<Link to={`/heroes/${row.original.heroId}`}>
+											{flexRender(cell.column.columnDef.cell, cell.getContext())}
+										</Link>
 									</TableCell>
 								))}
 							</TableRow>
 						))
 					) : (
 						<TableRow>
-							<TableCell colSpan={columns.length} className='h-24 text-center'>
-								No results.
+							<TableCell colSpan={columns.length + 1} className='h-24 text-center'> 
+								<Spinner />
 							</TableCell>
 						</TableRow>
 					)}

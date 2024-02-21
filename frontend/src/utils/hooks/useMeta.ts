@@ -21,13 +21,13 @@ const useMeta = (initialPos: MatchPlayerPositionType) => {
 	const meta = data?.heroStats?.winWeek ?? [];
 	const combinedData: MetaHero[] = useMemo(() => {
 		if (loading || error) return [];
-
-		return heroes.map(hero => {
+	
+		return heroes.map((hero) => {
 			const heroMeta = meta.find(m => m.heroId === hero.id);
 			const winRate = heroMeta?.matchCount
 				? ((heroMeta.winCount / heroMeta.matchCount) * 100).toFixed(1)
 				: undefined;
-
+	
 			return {
 				displayName: hero.displayName,
 				shortName: hero.shortName,
@@ -36,6 +36,7 @@ const useMeta = (initialPos: MatchPlayerPositionType) => {
 			};
 		});
 	}, [heroes, meta, loading]);
+	
 
 	return { loading, error, meta, combinedData };
 };

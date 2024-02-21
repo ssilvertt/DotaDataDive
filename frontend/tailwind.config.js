@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      bgmain:{
+        'main': "url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/outlanders/patch-notes/bg_repeater.jpg)",
+      },
       colors: {
         navbar: "#0a192f",
         desc: "#eee",

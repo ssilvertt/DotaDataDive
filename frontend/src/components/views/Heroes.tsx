@@ -1,17 +1,12 @@
 import useHeroes from '@/utils/hooks/useHeroes.ts';
 import HeroAttributeGrid from '../ui/Heroes/HeroAttributeGrid.tsx';
 import HeroRow from '../ui/Heroes/HeroRow.tsx';
+import Spinner from '../ui/spinner.tsx'
 const Heroes = () => {
 	const { loading, error, heroes } = useHeroes();
 
-	// useEffect(() =>{
-	// 	if(heroes){
-	// 		const imgs = heroes.map((hero) => `https://cdn.stratz.com/images/dota2/heroes/${hero.shortName}_vert.png`);
 
-	// 	}
-	// }, []);
-
-	if (loading) return <p className='text-center'>Loading...</p>;
+	if (loading) return <div className='text-center mt-5'><Spinner /></div>;
 	if (error) {
 		return <p className='text-center text-red-600'>Error: {error.message}</p>;
 	}

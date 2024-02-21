@@ -1,5 +1,4 @@
-import { ModeToggle } from './ModeToggle'
-import NavLink from './NavLink'
+import NavLink from './NavLink';
 const Header = () => {
 	return (
 		<header className='py-5 border-b border-gray-200'>
@@ -12,10 +11,9 @@ const Header = () => {
 					<NavLink to='/meta' label='Meta' />
 					<NavLink to='/heroes' label='Heroes' />
 				</div>
-				<ModeToggle />
 			</div>
 		</header>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;
