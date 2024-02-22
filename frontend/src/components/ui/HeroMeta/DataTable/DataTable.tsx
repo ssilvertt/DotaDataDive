@@ -46,7 +46,7 @@ export function DataTable<TValue>({
 
 	return (
 		<div className='w-auto'>
-			<Table className='border mx-auto '>
+			<Table className='border mx-auto shadow-xl' style={{ boxShadow: '0px 6px 10px 7px rgba(0, 0, 0, 0.2)' }}>
 				<TableHeader>
 					{table.getHeaderGroups().map(headerGroup => (
 						<TableRow key={headerGroup.id}>
@@ -73,7 +73,7 @@ export function DataTable<TValue>({
 								key={row.id}
 								data-state={row.getIsSelected() && 'selected'}
 							>
-								<TableCell className='w-[2px]'>{index + 1}</TableCell>
+								<TableCell width={1} className='w-0 pl-2'>{index + 1}</TableCell>
 								{row.getVisibleCells().map(cell => (
 									<TableCell key={cell.id} className=''>
 										<Link to={`/heroes/${row.original.heroId}`}>
