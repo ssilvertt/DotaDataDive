@@ -3,7 +3,6 @@ import HeroAbilities from '../HeroAbilities/HeroAbilities'
 import HeroAttributes from '../HeroAttributes/HeroAttributes'
 import HeroBaseStats from '../HeroBaseStats/HeroBaseStats'
 import HeroMainStats from '../HeroMainStats/HeroMainStats'
-import './herostats.css'
 interface HeroStatsProps {
 	hero: Hero
 	abilities: HeroAbilityType[]
@@ -11,8 +10,8 @@ interface HeroStatsProps {
 
 const HeroStats = ({ hero, abilities }: HeroStatsProps) => {
 	return (
-		<div className='hero-stats'>
-			<h1 className='hero-title'>{hero.displayName.toUpperCase()}</h1>
+		<div className='flex flex-col items-start mr-8 w-1/2 ml-72'>
+			<h1 className='scroll-m-20 text-6xl font-semibold tracking-tight lg:text-6xl mt-[100px] font-reaver mb-4'>{hero.displayName.toUpperCase()}</h1>
 			<HeroMainStats hero={hero} />
 
 			<HeroAbilities abilities={abilities} />

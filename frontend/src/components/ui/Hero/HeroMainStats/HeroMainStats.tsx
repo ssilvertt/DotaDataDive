@@ -7,11 +7,11 @@ const HeroMainStats = ({ hero }: HeroMainStatsProps) => {
 	const complexityPoints = Array(3)
 		.fill('')
 		.map((_, index) => ({
-			className: `complexity-point ${hero.stats.complexity > index ? 'bg-[#dedede]' : ''}`,
+			className: `w-3 h-3 border border-white border-solid rotate-45 ${hero.stats.complexity > index ? 'bg-[#dedede]' : ''}`,
 		}));
 
 	return (
-		<div className='hero-main-stats'>
+		<div className='flex flex-row items-center space-x-2'>
 			<img
 				className='w-8 h-8'
 				src={`https://cdn.stratz.com/images/dota2/primary_attributes/${hero.stats.primaryAttribute}.png`}

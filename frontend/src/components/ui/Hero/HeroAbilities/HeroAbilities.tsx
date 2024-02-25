@@ -47,7 +47,7 @@ const HeroAbility = ({ ability }: HeroAbilityProps) => {
 
 const HeroAbilities = ({ abilities }: { abilities: HeroAbilityType[] }) => {
 	return (
-		<div className='abilities'>
+		<div className='flex space-x-2 mt-4'>
 			{abilities?.map(ability => (
 				<HeroAbility key={ability.ability.name} ability={ability} />
 			))}
