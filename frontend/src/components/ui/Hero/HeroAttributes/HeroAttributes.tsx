@@ -1,8 +1,8 @@
-import { Hero } from '@/utils/types'
-import AttributeRow from '../AttributeRow/AttributeRow'
+import { Hero } from '@/utils/types';
+import AttributeRow from '../AttributeRow/AttributeRow';
 
 interface HeroAttProps {
-	hero: Hero
+	hero: Hero;
 }
 
 const HeroAttributes = ({ hero }: HeroAttProps) => {
@@ -29,7 +29,7 @@ const HeroAttributes = ({ hero }: HeroAttProps) => {
 				/>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export default HeroAttributes
+export default HeroAttributes;
