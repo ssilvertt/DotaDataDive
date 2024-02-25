@@ -5,7 +5,7 @@ const HeroContainer = styled('div').withConfig({
 })<{ bg: string }>`
 	display: flex;
 	justify-content: center;
-	height: 100%;
+	height: 100vh;
 	&::before {
 		background-size: cover;
 		content: '';
