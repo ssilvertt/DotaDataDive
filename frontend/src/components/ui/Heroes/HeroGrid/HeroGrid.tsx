@@ -9,7 +9,7 @@ interface HeroGridProps {
 const HeroGrid = ({ heroes, attribute }: HeroGridProps) => {
 	const displayHeroes = heroes
 		.filter(hero => hero.stats.primaryAttribute === attribute)
-		.sort((a, b) => a.displayName.localeCompare(b.displayName)); // Sort by displayName
+		.sort((a, b) => a.displayName.localeCompare(b.displayName)); 
 
 	return (
 		<div className='flex flex-wrap justify-start items-center max-w-[calc(50px*13)]'>
