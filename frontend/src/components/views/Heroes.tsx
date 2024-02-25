@@ -1,29 +1,29 @@
 import bg from '@/assets/generic_hero_background_png.png';
 import useHeroes from '@/utils/hooks/useHeroes.ts';
 import styled from 'styled-components';
-import HeroAttributeGrid from '../ui/Heroes/HeroAttributeGrid.tsx';
-import HeroRow from '../ui/Heroes/HeroRow.tsx';
+import HeroAttributeGrid from '../ui/Heroes/HeroAttributeGrid/HeroAttributeGrid.tsx';
+import HeroRow from '../ui/Heroes/HeroRow/HeroRow.tsx';
 import Spinner from '../ui/spinner.tsx';
 
 const BackgroundImageLink = styled('div').withConfig({
-     shouldForwardProp: (prop) => !['bg'].includes(prop),
-   })<{bg: string}>`
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  &::before {
-    background-size: cover;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(${bg});
-    filter: blur(6px);
-    z-index: -1;
-		
-  }
+	shouldForwardProp: prop => !['bg'].includes(prop),
+})<{ bg: string }>`
+	display: flex;
+	justify-content: center;
+	position: relative;
+	height: 100%;
+	&::before {
+		background-size: cover;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/greyfade.jpg');
+		filter: blur(6px);
+		z-index: -1;
+	}
 `;
 
 const Heroes = () => {
@@ -41,7 +41,7 @@ const Heroes = () => {
 
 	return (
 		<BackgroundImageLink bg={bg} className=''>
-			<div className='flex flex-shrink-0 flex-grow-1 flex-col pt-16'> 
+			<div className='flex flex-shrink-0 flex-grow-1 flex-col pt-16'>
 				<div className='ml-auto mr-auto pl-4 pr-4 flex flex-col relative'>
 					<HeroRow>
 						<HeroAttributeGrid
