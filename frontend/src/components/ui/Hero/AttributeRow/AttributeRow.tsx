@@ -17,7 +17,7 @@ const AttributeRow = ({ attribute, base, gain, attribute_type }: AttributeRowPro
           src={`https://cdn.stratz.com/images/dota2/primary_attributes/${attribute_type.toLowerCase()}.png`}
           alt={attribute_type}
         />
-        <p className="pl-2 stats-text">
+        <p className="pl-2 leading-7 font-reaver font-bold text-gray-200 text-lg">
           {base} + {gain.toFixed(1)}
         </p>
       </div>
