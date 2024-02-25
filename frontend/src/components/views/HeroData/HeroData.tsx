@@ -13,7 +13,6 @@ const HeroData = () => {
 	const filteredAbilities = hero?.abilities.filter(
 		ability => ability.ability.language.displayName !== ''
 	);
-	console.log(filteredAbilities);
 	const heroBg =
 		hero && heroLoadoutBackground.hasOwnProperty(hero.shortName)
 			? heroLoadoutBackground[
