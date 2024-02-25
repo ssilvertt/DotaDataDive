@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className='bg-black text-neutral-600  p-4 text-center leading-3'>
+		<footer className=' text-neutral-600  p-4 text-center leading-3'>
 			<div className='flex flex-row justify-center mb-5 mt-2 space-x-20'>
 				<a href="https://www.valvesoftware.com/en/about">
 					<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/valve_logo.png" alt="" className='h-[30px]'/>
