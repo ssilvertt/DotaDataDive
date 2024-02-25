@@ -1,6 +1,5 @@
 import { Hero } from '@/utils/types'
 import { Link } from 'react-router-dom'
-import './heroimage.css'
 interface HeroImageProps {
 	hero: Hero
 }
