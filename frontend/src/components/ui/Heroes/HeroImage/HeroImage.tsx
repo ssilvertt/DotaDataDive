@@ -12,11 +12,11 @@ const HeroImage = ({ hero }: HeroImageProps) => {
 				<img
 					src={`https://cdn.stratz.com/images/dota2/heroes/${hero.shortName}_vert.png`}
 					alt={hero.displayName}
-					className='heroImage '
+					className='w-[50px] h-[70px] border border-transparent  group-hover:border-black '
 				/>
 			</div>
-			<div className='heroName'>
-				<small>{hero.displayName}</small>
+			<div className='absolute inset-0 z-10 text-center flex flex-col justify-end opacity-0'>
+				<small className='hover:opacity-100 duration-300;'>{hero.displayName}</small>
 			</div>
 		</Link>
 	)
