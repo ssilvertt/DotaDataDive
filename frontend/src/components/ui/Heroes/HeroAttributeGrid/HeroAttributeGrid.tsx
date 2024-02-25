@@ -1,10 +1,10 @@
-import { Hero } from '@/utils/types'
-import HeroGrid from './HeroGrid'
+import { Hero } from '@/utils/types';
+import HeroGrid from '../HeroGrid/HeroGrid';
 
 interface HeroAttributeGridProps {
-	title: string
-	attribute: string
-	heroes: Hero[]
+	title: string;
+	attribute: string;
+	heroes: Hero[];
 }
 
 const HeroAttributeGrid = ({
@@ -25,7 +25,7 @@ const HeroAttributeGrid = ({
 
 			<HeroGrid heroes={heroes} attribute={attribute} />
 		</div>
-	)
-}
+	);
+};
 
-export default HeroAttributeGrid
+export default HeroAttributeGrid;
