@@ -3,12 +3,12 @@ import {
 	TooltipContent,
 	TooltipProvider,
 	TooltipTrigger,
-} from '@/components/ui/tooltip'
+} from '@/components/ui/tooltip';
 
 interface HeroBaseStatProps {
-	url: string
-	stat: string
-	tooltipText: string
+	url: string;
+	stat: string;
+	tooltipText: string;
 }
 
 const HeroBaseStat = ({ url, stat, tooltipText }: HeroBaseStatProps) => {
@@ -28,7 +28,7 @@ const HeroBaseStat = ({ url, stat, tooltipText }: HeroBaseStatProps) => {
 				</Tooltip>
 			</TooltipProvider>
 		</>
-	)
-}
+	);
+};
 
-export default HeroBaseStat
+export default HeroBaseStat;
