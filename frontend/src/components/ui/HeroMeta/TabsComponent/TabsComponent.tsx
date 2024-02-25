@@ -6,7 +6,7 @@ import { DataTable } from '../DataTable/DataTable';
 const TabsComponent = () => {
 	return (
 		<Tabs defaultValue={MatchPlayerPositionType.All} className='w-full'>
-			<TabsList className='flex flex-row w-full bg-background'>
+			<TabsList className='flex flex-row w-full'>
 				<TabsTrigger value={MatchPlayerPositionType.All}>Overall</TabsTrigger>
 				<TabsTrigger value={MatchPlayerPositionType.Position_1}>
 					Carry
