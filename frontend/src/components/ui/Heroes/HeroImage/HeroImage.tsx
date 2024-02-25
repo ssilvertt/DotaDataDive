@@ -7,7 +7,7 @@ interface HeroImageProps {
 
 const HeroImage = ({ hero }: HeroImageProps) => {
 	return (
-		<Link to={`/heroes/${hero.id}`} className='hero group'>
+		<Link to={`/heroes/${hero.id}`} className='relative cursor-pointer block m-1 hover:shadow-lg hover:scale-[2.3] hover:z-20 transition-transform ease-out duration-100 group'>
 			<div>
 				<img
 					src={`https://cdn.stratz.com/images/dota2/heroes/${hero.shortName}_vert.png`}
