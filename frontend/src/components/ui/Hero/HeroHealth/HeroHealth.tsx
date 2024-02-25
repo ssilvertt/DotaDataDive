@@ -1,7 +1,7 @@
-import { Hero } from '@/utils/types'
+import { Hero } from '@/utils/types';
 
 interface HeroHealthProps {
-	hero: Hero
+	hero: Hero;
 }
 
 const HeroHealth = ({ hero }: HeroHealthProps) => {
@@ -22,7 +22,7 @@ const HeroHealth = ({ hero }: HeroHealthProps) => {
 				</div>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export default HeroHealth
+export default HeroHealth;

@@ -1,7 +1,7 @@
-import { Hero } from '@/utils/types'
+import { Hero } from '@/utils/types';
 
 interface HeroManaProps {
-	hero: Hero
+	hero: Hero;
 }
 
 const HeroMana = ({ hero }: HeroManaProps) => {
@@ -22,7 +22,7 @@ const HeroMana = ({ hero }: HeroManaProps) => {
 				</div>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export default HeroMana
+export default HeroMana;
