@@ -1,15 +1,27 @@
-import NavLink from './NavLink';
+import NavButton from './NavButton';
+import { NavLink } from 'react-router-dom';
 const Header = () => {
 	return (
-		<header className='py-5'>
-			<div className='container mx-auto flex items-center justify-between'>
-				<div className='flex items-center '>
-					<h1 className='text-xl font-bold tracking-tight'>DotaDataDive</h1>
+		<header className=''>
+			<div className=' text-white px-6 py-4 flex items-center'>
+				<div className='flex space-x-4 items-center text-[#d6dadd] hover:text-white'>
+					<div className='pl-10'>
+						<NavLink to='/'>
+							<h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
+								DotaDataDive
+							</h3>
+						</NavLink>
+					</div>
+					<div className='space-x-2'>
+						<i className='fas fa-icon1'></i>
+						<i className='fas fa-icon2'></i>
+						<i className='fas fa-icon3'></i>
+					</div>
 				</div>
-				<div className='flex items-center justify-center space-x-6 w-full'>
-					<NavLink to='/' label='Home' />
-					<NavLink to='/meta' label='Meta' />
-					<NavLink to='/heroes' label='Heroes' />
+				<div className='space-x-4 '>
+					<NavButton to='/'>HOME</NavButton>
+					<NavButton to='/meta'>META</NavButton>
+					<NavButton to='/heroes'>HEROES</NavButton>
 				</div>
 			</div>
 		</header>
