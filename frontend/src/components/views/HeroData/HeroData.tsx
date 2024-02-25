@@ -1,11 +1,11 @@
 import HeroContainer from '@/components/ui/Hero/HeroContainer/HeroContainer';
 import HeroModel from '@/components/ui/Hero/HeroModel/HeroModel';
 import HeroStats from '@/components/ui/Hero/HeroStats/HeroStats';
+import Spinner from '@/components/ui/spinner';
 import heroSelector from '@/utils/heroSelector';
 import heroLoadoutBackground from '@/utils/herobackgrounds';
 import useHeroes from '@/utils/hooks/useHeroes';
 import { useParams } from 'react-router-dom';
-
 const HeroData = () => {
 	const { id } = useParams();
 	const { loading, error, heroes } = useHeroes();
@@ -20,12 +20,14 @@ const HeroData = () => {
 				]
 			: undefined;
 
-	if (loading) {
-		return <div>loading</div>;
-	}
-
+	if (loading)
+		return (
+			<div className='text-center mt-5'>
+				<Spinner />
+			</div>
+		);
 	if (error) {
-		return <div>error</div>;
+		return <p className='text-center text-red-600'>Error: {error.message}</p>;
 	}
 
 	if (!hero) {
