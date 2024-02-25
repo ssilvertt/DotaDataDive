@@ -10,7 +10,6 @@ const BackgroundImageLink = styled('div').withConfig({
 })<{ bg: string }>`
 	display: flex;
 	justify-content: center;
-	position: relative;
 	height: 100%;
 	&::before {
 		background-size: cover;
