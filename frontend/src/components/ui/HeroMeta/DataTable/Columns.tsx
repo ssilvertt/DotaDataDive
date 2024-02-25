@@ -1,7 +1,6 @@
 import { MetaHero } from '@/utils/types';
 import { ColumnDef } from '@tanstack/react-table';
 export const columns: ColumnDef<MetaHero>[] = [
-
 	{
 		accessorKey: 'displayName',
 		header: 'Hero',
@@ -32,14 +31,19 @@ export const columns: ColumnDef<MetaHero>[] = [
 			);
 		},
 		cell: ({ row }) => {
-			const winRate = row.original.winRate ? Number(row.original.winRate).toFixed(1) : 0;
+			const winRate = row.original.winRate
+				? Number(row.original.winRate).toFixed(1)
+				: 0;
+			const numericWinRate = Number(winRate);
 			return (
-				<div className={`${winRate >= 50 ? 'text-green-400' : 'text-red-500'}`}>
+				<div
+					className={`${numericWinRate >= 50 ? 'text-green-400' : 'text-red-500'}`}
+				>
 					{winRate}%
 				</div>
 			);
 		},
-	},	
+	},
 	{
 		accessorKey: 'matchCount',
 		header: ({ column }) => {
