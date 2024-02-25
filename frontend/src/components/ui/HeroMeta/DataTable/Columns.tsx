@@ -1,5 +1,6 @@
 import { MetaHero } from '@/utils/types';
 import { ColumnDef } from '@tanstack/react-table';
+import { ChevronsUpDown } from 'lucide-react';
 export const columns: ColumnDef<MetaHero>[] = [
 	{
 		accessorKey: 'displayName',
@@ -23,10 +24,11 @@ export const columns: ColumnDef<MetaHero>[] = [
 		header: ({ column }) => {
 			return (
 				<a
-					className='hover:brightness-200 cursor-pointer'
+					className='hover:brightness-200 cursor-pointer flex flex-row align-middle'
 					onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
 				>
 					Winrate
+					<ChevronsUpDown size={20}/>
 				</a>
 			);
 		},
@@ -49,10 +51,11 @@ export const columns: ColumnDef<MetaHero>[] = [
 		header: ({ column }) => {
 			return (
 				<a
-					className='hover:brightness-200 cursor-pointer'
+					className='hover:brightness-200 cursor-pointer flex flex-row align-middle'
 					onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
 				>
 					Matches
+					<ChevronsUpDown size={20}/>
 				</a>
 			);
 		},
