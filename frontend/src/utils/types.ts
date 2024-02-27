@@ -49,8 +49,8 @@ export interface Constants {
 }
 
 export interface HeroWinWeekType {
-	week: number;
 	heroId: number;
+	week: number | undefined;
 	winCount: number;
 	matchCount: number;
 }
@@ -64,14 +64,15 @@ export interface HeroWinrate {
 }
 
 export interface MetaHero {
-	week: number;
-	heroId: number;
+	week: number | undefined;
+	heroId: number | undefined;
 	winCount: number;
 	matchCount: number;
 	displayName: string;
 	shortName: string;
 	winRate: string | undefined;
 }
+
 
 export interface GetHeroesResult {
 	constants: {
