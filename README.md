@@ -11,7 +11,7 @@ This project is developed using the following technologies:
 - GraphQL
 - Apollo
 
-## Installation
+## Installation & Configuration
 
 To install and run the project, follow these steps:
 
@@ -33,7 +33,16 @@ To install and run the project, follow these steps:
    npm install
 ```
 
-3. Start project:
+4. Include your personal token:
+
+Go to https://stratz.com/api and obtain your personal api token
+Create in src folder config.ts and paste this code: 
+```js
+export const TOKEN = 'INSERT_YOUR_TOKEN_THERE';
+```
+Replace this with your personal token
+
+5. Start project:
 
 ```sh
    npm run dev
