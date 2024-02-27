@@ -11,7 +11,7 @@ const router = createBrowserRouter([
 		element: <DefaultLayout/>,
 		children: [
 			{
-				path: '/meta',
+				path: '/',
 				element: <Meta/>
 			},
 			{
