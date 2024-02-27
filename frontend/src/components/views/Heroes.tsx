@@ -1,13 +1,11 @@
-import bg from '@/assets/generic_hero_background_png.png';
+
 import useHeroes from '@/utils/hooks/useHeroes.ts';
 import styled from 'styled-components';
 import HeroAttributeGrid from '../ui/Heroes/HeroAttributeGrid/HeroAttributeGrid.tsx';
 import HeroRow from '../ui/Heroes/HeroRow/HeroRow.tsx';
 import Spinner from '../ui/spinner.tsx';
 
-const BackgroundImageLink = styled('div').withConfig({
-	shouldForwardProp: prop => !['bg'].includes(prop),
-})<{ bg: string }>`
+const BackgroundImageLink = styled.div`
 	display: flex;
 	justify-content: center;
 	height: 100%;
@@ -39,7 +37,7 @@ const Heroes = () => {
 	}
 
 	return (
-		<BackgroundImageLink bg={bg} className=''>
+		<BackgroundImageLink className=''>
 			<div className='flex flex-shrink-0 flex-grow-1 flex-col pt-16'>
 				<div className='ml-auto mr-auto pl-4 pr-4 flex flex-col relative'>
 					<HeroRow>

@@ -32,7 +32,7 @@ export function DataTable<TValue>({
 		{ id: 'winRate', desc: true },
 		{ id: 'matchCount', desc: true },
 	]);
-	const { loading, error, combinedData } = useMeta(position);
+	const { combinedData } = useMeta(position);
 	const table = useReactTable({
 		data: combinedData,
 		columns,

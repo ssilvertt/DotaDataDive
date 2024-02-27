@@ -25,6 +25,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "@/graphql.d.ts", "codegen.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
