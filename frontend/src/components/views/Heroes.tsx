@@ -6,9 +6,6 @@ import HeroRow from '../ui/Heroes/HeroRow/HeroRow.tsx';
 import Spinner from '../ui/spinner.tsx';
 
 const BackgroundImageLink = styled.div`
-	display: flex;
-	justify-content: center;
-	height: 100%;
 	&::before {
 		background-size: cover;
 		content: '';
