@@ -6,7 +6,7 @@ const Header = () => {
 			<div className=' text-white px-6 py-4 flex items-center'>
 				<div className='flex space-x-4 items-center text-[#d6dadd] hover:text-white'>
 					<div className='pl-10'>
-						<NavLink to='/'>
+						<NavLink to='/meta'>
 							<h3 className='scroll-m-20 text-2xl font-semibold tracking-tight'>
 								DotaDataDive
 							</h3>
@@ -19,7 +19,6 @@ const Header = () => {
 					</div>
 				</div>
 				<div className='space-x-4 '>
-					<NavButton to='/'>HOME</NavButton>
 					<NavButton to='/meta'>META</NavButton>
 					<NavButton to='/heroes'>HEROES</NavButton>
 				</div>
