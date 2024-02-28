@@ -42,7 +42,7 @@ Create in frontend folder .env and paste this code:
 ```js
 VITE_TOKEN=YOUR_TOKEN
 ```
-Replace ``YOUR_TOKEN`` this with your personal token
+Replace ``YOUR_TOKEN`` with your personal token
 
 5. Start project:
 
