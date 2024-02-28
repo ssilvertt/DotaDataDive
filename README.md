@@ -38,11 +38,11 @@ To install and run the project, follow these steps:
 4. Include your personal token:
 
 Go to https://stratz.com/api and obtain your personal api token
-Create in src folder config.ts and paste this code: 
+Create in frontend folder .env and paste this code: 
 ```js
-export const TOKEN = 'INSERT_YOUR_TOKEN_THERE';
+VITE_TOKEN=YOUR_TOKEN
 ```
-Replace this with your personal token
+Replace ``YOUR_TOKEN`` this with your personal token
 
 5. Start project:
 
