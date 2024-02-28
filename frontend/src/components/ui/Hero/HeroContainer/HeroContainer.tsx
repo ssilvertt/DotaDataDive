@@ -6,8 +6,14 @@ interface HeroContainerProps {
 
 const HeroContainer = styled.div<HeroContainerProps>` 
   display: flex;
+  flex-direction: row;
   justify-content: center;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column; 
+  }
+
   &:before {
     background-size: cover;
     content: '';

@@ -6,8 +6,8 @@ interface HeroModelProps {
 
 const HeroModel = ({ hero }: HeroModelProps) => {
 	return (
-		<div className='flex flex-col items-start ml-8 w-full'>
-			<video className='h-[52rem] w-[52rem] rounded-lg' autoPlay loop muted>
+		<div className='flex lg:flex-col items-start lg:ml-8 lg:w-full order-1 lg:order-2 lg:mt-0'>
+			<video className='lg:h-[52rem] lg:w-[52rem] h-[30rem] w-[30rem] rounded-lg' autoPlay loop muted>
 				<source
 					src={`https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/${hero.shortName}.webm`}
 					type='video/webm'

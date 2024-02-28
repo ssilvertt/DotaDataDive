@@ -17,7 +17,7 @@ const HeroBaseStat = ({ url, stat, tooltipText }: HeroBaseStatProps) => {
 			<TooltipProvider delayDuration={0}>
 				<Tooltip>
 					<TooltipTrigger asChild>
-						<div className='flex flex-col items-center justify-center align-middle mx-3 '>
+						<div className='flex flex-col items-center justify-center align-middle mx-1 lg:mx-3 '>
 							<img src={url} className='w-5 h-5' alt='' />
 							<div className='small-text'>{stat}</div>
 						</div>

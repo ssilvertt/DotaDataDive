@@ -41,7 +41,7 @@ const HeroBaseStats = ({ hero }: HeroBaseStatsProps) => {
 	];
 
 	return (
-		<div className='flex flex-col mt-6 py-4 pl-6 border-y border-gray-400/40 pr-14 justify-center align-middle'>
+		<div className='flex flex-col mt-6 lg:py-4 lg:pl-6 lg:border-y lg:border-gray-400/40 lg:pr-14 justify-center align-middle'>
 			<div className='flex flex-row justify-center align-middle'>
 				{baseStats.map(stat => (
 					<HeroBaseStat key={stat.url} {...stat} />

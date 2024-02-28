@@ -8,7 +8,7 @@ interface HeroAttProps {
 const HeroAttributes = ({ hero }: HeroAttProps) => {
 	return (
 		<>
-			<div className='flex flex-col mt-6 border-y border-gray-400/40 py-4 border-r pr-6'>
+			<div className='flex flex-col mt-6 lg:border-y lg:border-gray-400/40 py-4 lg:border-r pr-6'>
 				<AttributeRow
 					attribute='STRENGTH'
 					base={hero.stats.strengthBase}
