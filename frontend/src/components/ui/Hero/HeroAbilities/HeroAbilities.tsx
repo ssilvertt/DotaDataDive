@@ -10,7 +10,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import { isBrowser } from 'react-device-detect';
 interface HeroAbilityProps {
 	ability: HeroAbilityType;
 }
