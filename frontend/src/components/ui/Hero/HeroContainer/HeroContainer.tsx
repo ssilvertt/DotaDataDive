@@ -22,7 +22,7 @@ const HeroContainer = styled.div<HeroContainerProps>`
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: ${(props) => props.$bg};
+    background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/greyfade.jpg');
     filter: blur(6px) saturate(1.3);
     z-index: -1;
   }
