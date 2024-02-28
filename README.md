@@ -38,7 +38,7 @@ To install and run the project, follow these steps:
 4. Include your personal token:
 
 Go to https://stratz.com/api and obtain your personal api token
-Create in frontend folder .env and paste this code: 
+Create in frontend folder .env file and paste this code: 
 ```js
 VITE_TOKEN=YOUR_TOKEN
 ```
