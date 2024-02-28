@@ -11,6 +11,8 @@ import { MatchPlayerPositionType, MetaHero } from '@/utils/types';
 import {
 	ColumnDef,
 	SortingState,
+	ColumnFiltersState,
+	getFilteredRowModel,
 	flexRender,
 	getCoreRowModel,
 	getSortedRowModel,
@@ -19,6 +21,7 @@ import {
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Spinner from '../../spinner';
+import { Input } from '../../input';
 interface DataTableProps<TValue> {
 	columns: ColumnDef<MetaHero, TValue>[];
 	position: MatchPlayerPositionType;
@@ -31,6 +34,9 @@ export function DataTable<TValue>({
 	const [sorting, setSorting] = useState<SortingState>([
 		{ id: 'winRate', desc: true },
 	]);
+	const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>(
+    []
+  )
 	const { combinedData } = useMeta(position);
 	const table = useReactTable({
 		data: combinedData,
@@ -38,13 +44,29 @@ export function DataTable<TValue>({
 		getCoreRowModel: getCoreRowModel(),
 		onSortingChange: setSorting,
 		getSortedRowModel: getSortedRowModel(),
+		onColumnFiltersChange: setColumnFilters,
+    getFilteredRowModel: getFilteredRowModel(),
 		state: {
 			sorting,
+			columnFilters,
 		},
 	});
 
 	return (
+		<div>
+			
+		
 		<div className='w-auto'>
+		<div className="flex py-4">
+        <Input
+          placeholder="Filter heroes"
+          value={(table.getColumn("displayName")?.getFilterValue() as string) ?? ""}
+          onChange={(event) =>
+            table.getColumn("displayName")?.setFilterValue(event.target.value)
+          }
+          className="max-w-sm mx-auto"
+        />
+      </div>
 			<Table
 				className='border mx-auto shadow-xl'
 				style={{ boxShadow: '0px 6px 10px 7px rgba(0, 0, 0, 0.2)' }}
@@ -102,6 +124,7 @@ export function DataTable<TValue>({
 					)}
 				</TableBody>
 			</Table>
+		</div>
 		</div>
 	);
 }
