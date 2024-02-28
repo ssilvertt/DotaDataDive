@@ -3,6 +3,7 @@ import HeroAbilities from '../HeroAbilities/HeroAbilities';
 import HeroAttributes from '../HeroAttributes/HeroAttributes';
 import HeroBaseStats from '../HeroBaseStats/HeroBaseStats';
 import HeroMainStats from '../HeroMainStats/HeroMainStats';
+
 interface HeroStatsProps {
 	hero: Hero;
 	abilities: HeroAbilityType[];
