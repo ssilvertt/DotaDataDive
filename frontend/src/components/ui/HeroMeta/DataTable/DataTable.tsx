@@ -30,7 +30,6 @@ export function DataTable<TValue>({
 }: DataTableProps<TValue>) {
 	const [sorting, setSorting] = useState<SortingState>([
 		{ id: 'winRate', desc: true },
-		{ id: 'matchCount', desc: true },
 	]);
 	const { combinedData } = useMeta(position);
 	const table = useReactTable({
