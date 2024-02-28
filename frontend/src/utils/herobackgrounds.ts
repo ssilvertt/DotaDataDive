@@ -1,4 +1,41 @@
-import img from '../assets/hero-backgrounds/loadout_bg_rocky_003_jpg.jpeg'
+import loadout_bg_field_001_jpg from '../assets/hero-backgrounds/loadout_bg_field_001_jpg.jpeg'
+import loadout_bg_field_002_jpg from '../assets/hero-backgrounds/loadout_bg_field_002_jpg.jpeg'
+import loadout_bg_field_003_jpg from '../assets/hero-backgrounds/loadout_bg_field_003_jpg.jpeg'
+import loadout_bg_field_004_jpg from '../assets/hero-backgrounds/loadout_bg_field_004_jpg.jpeg'
+import loadout_bg_fire_001_jpg from '../assets/hero-backgrounds/loadout_bg_fire_001_jpg.jpeg'
+import loadout_bg_fire_002_jpg from '../assets/hero-backgrounds/loadout_bg_fire_002_jpg.jpeg'
+import loadout_bg_fire_003_jpg from '../assets/hero-backgrounds/loadout_bg_fire_003_jpg.jpeg'
+import loadout_bg_fire_004_jpg from '../assets/hero-backgrounds/loadout_bg_fire_004_jpg.jpeg'
+import loadout_bg_forest_001_jpg from '../assets/hero-backgrounds/loadout_bg_forest_001_jpg.jpeg'
+import loadout_bg_forest_002_jpg from '../assets/hero-backgrounds/loadout_bg_forest_002_jpg.jpeg'
+import loadout_bg_forest_003_jpg from '../assets/hero-backgrounds/loadout_bg_forest_003_jpg.jpeg'
+import loadout_bg_forest_004_jpg from '../assets/hero-backgrounds/loadout_bg_forest_004_jpg.jpeg'
+import loadout_bg_ice_001_jpg from '../assets/hero-backgrounds/loadout_bg_ice_001_jpg.jpeg'
+import loadout_bg_ice_002_jpg from '../assets/hero-backgrounds/loadout_bg_ice_002_jpg.jpeg'
+import loadout_bg_ice_003_jpg from '../assets/hero-backgrounds/loadout_bg_ice_003_jpg.jpeg'
+import loadout_bg_ice_004_jpg from '../assets/hero-backgrounds/loadout_bg_ice_004_jpg.jpeg'
+import loadout_bg_jungle_001_jpg from '../assets/hero-backgrounds/loadout_bg_jungle_001_jpg.jpeg'
+import loadout_bg_jungle_002_jpg from '../assets/hero-backgrounds/loadout_bg_jungle_002_jpg.jpeg'
+import loadout_bg_jungle_003_jpg from '../assets/hero-backgrounds/loadout_bg_jungle_003_jpg.jpeg'
+import loadout_bg_jungle_004_jpg from '../assets/hero-backgrounds/loadout_bg_jungle_004_jpg.jpeg'
+import loadout_bg_outworld_001_jpg from '../assets/hero-backgrounds/loadout_bg_outworld_001_jpg.jpeg'
+import loadout_bg_outworld_002_jpg from '../assets/hero-backgrounds/loadout_bg_outworld_002_jpg.jpeg'
+import loadout_bg_outworld_003_jpg from '../assets/hero-backgrounds/loadout_bg_outworld_003_jpg.jpeg'
+import loadout_bg_outworld_004_jpg from '../assets/hero-backgrounds/loadout_bg_outworld_004_jpg.jpeg'
+import loadout_bg_rocky_001_jpg from '../assets/hero-backgrounds/loadout_bg_rocky_001_jpg.jpeg'
+import loadout_bg_rocky_002_jpg from '../assets/hero-backgrounds/loadout_bg_rocky_002_jpg.jpeg'
+import loadout_bg_rocky_003_jpg from '../assets/hero-backgrounds/loadout_bg_rocky_003_jpg.jpeg'
+import loadout_bg_rocky_004_jpg from '../assets/hero-backgrounds/loadout_bg_rocky_004_jpg.jpeg'
+import loadout_bg_sky_001_jpg from '../assets/hero-backgrounds/loadout_bg_sky_001_jpg.jpeg'
+import loadout_bg_sky_002_jpg from '../assets/hero-backgrounds/loadout_bg_sky_002_jpg.jpeg'
+import loadout_bg_sky_003_jpg from '../assets/hero-backgrounds/loadout_bg_sky_003_jpg.jpeg'
+import loadout_bg_sky_004_jpg from '../assets/hero-backgrounds/loadout_bg_sky_004_jpg.jpeg'
+import loadout_bg_water_001_jpg from '../assets/hero-backgrounds/loadout_bg_water_001_jpg.jpeg'
+import loadout_bg_water_002_jpg from '../assets/hero-backgrounds/loadout_bg_water_002_jpg.jpeg'
+import loadout_bg_water_003_jpg from '../assets/hero-backgrounds/loadout_bg_water_003_jpg.jpeg'
+import loadout_bg_water_004_jpg from '../assets/hero-backgrounds/loadout_bg_water_004_jpg.jpeg'
+
+
 type HeroLoadoutBackground = {
   [key in
     | 'abaddon'
@@ -210,7 +247,7 @@ const heroLoadoutBackground: HeroLoadoutBackground = {
   rubick: ["radial-gradient(circle at 50% 0%, rgba(24, 45, 40, 0.8), rgba(17, 16, 23))", '/src/assets/hero-backgrounds/loadout_bg_outworld_003_jpg.jpeg'],
   sand_king: ["radial-gradient(circle at 50% 0%, rgba(44, 37, 31, 0.8), rgba(23, 16, 16))", img],
   shadow_demon: ["radial-gradient(circle at 50% 0%, rgba(44, 26, 31, 0.8), rgba(23, 16, 16))", '/src/assets/hero-backgrounds/loadout_bg_fire_002_jpg.jpeg'],
-  nevermore: ["radial-gradient(circle at 50% 0%, rgba(39, 9, 9, 0.8), rgba(9, 5, 5))", '/src/assets/hero-backgrounds/loadout_bg_fire_004_jpg.jpeg'],
+  nevermore: ["radial-gradient(circle at 50% 0%, rgba(39, 9, 9, 0.8), rgba(9, 5, 5))", '../assets/hero-backgrounds/loadout_bg_fire_004_jpg.jpeg'],
   shadow_shaman: ["radial-gradient(circle at 50% 0%, rgba(39, 29, 9, 0.8), rgba(14, 9, 9))", '/src/assets/hero-backgrounds/loadout_bg_rocky_002_jpg.jpeg'],
   silencer: ["radial-gradient(circle at 50% 0%, rgba(34, 20, 37, 0.8), rgba(23, 17, 17))", '/src/assets/hero-backgrounds/loadout_bg_sky_001_jpg.jpeg'],
   skywrath_mage: ["radial-gradient(circle at 50% 0%, rgba(40, 51, 66, 0.8), rgba(2, 2, 2))", '/src/assets/hero-backgrounds/loadout_bg_sky_001_jpg.jpeg'],
