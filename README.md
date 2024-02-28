@@ -2,6 +2,8 @@
 
 DotaDataDive is a project designed to view the current meta of Dota 2 characters for any role. It also implements a beautiful character viewing menu, just like in the Dota 2 game itself.
 
+Site is placed on vercel hosting: https://dota-data-dive.vercel.app/
+
 ## Technologies
 
 This project is developed using the following technologies:
