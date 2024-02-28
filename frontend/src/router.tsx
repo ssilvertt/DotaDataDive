@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import DefaultLayout from './layouts/DefaultLayout'
 import Meta from './components/views/Meta'
 import Heroes from './components/views/Heroes'
-import HeroData from './components/views/HeroData/HeroData'
+import HeroData from './components/views/HeroData'
 
 
 const router = createBrowserRouter([
