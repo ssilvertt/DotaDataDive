@@ -34,8 +34,9 @@ const HeroData = () => {
 		return <div>Hero not found</div>;
 	}
 
+	console.log(heroBg ? `${heroBg[0]}, url(${heroBg[1]})` : '');
 	return (
-		<HeroContainer bg={heroBg ? `${heroBg[0]}, url(${heroBg[1]})` : ''}>
+		<HeroContainer $bg={heroBg ? `${heroBg[0]}, url(${heroBg[1]})` : ''}>
 			{filteredAbilities && (
 				<HeroStats hero={hero} abilities={filteredAbilities} />
 			)}
