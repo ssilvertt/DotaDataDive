@@ -1,29 +1,28 @@
 import { createBrowserRouter } from 'react-router-dom';
-import DefaultLayout from './layouts/DefaultLayout'
-import Meta from './components/views/Meta'
-import Heroes from './components/views/Heroes'
-import HeroData from './components/views/HeroData'
-
+import HeroData from './components/views/HeroData';
+import Heroes from './components/views/Heroes/Heroes';
+import Meta from './components/views/Meta';
+import DefaultLayout from './layouts/DefaultLayout';
 
 const router = createBrowserRouter([
 	{
-		path: "/",
-		element: <DefaultLayout/>,
+		path: '/',
+		element: <DefaultLayout />,
 		children: [
 			{
 				path: '/',
-				element: <Meta/>
+				element: <Meta />,
 			},
 			{
 				path: '/heroes',
-				element: <Heroes/>
+				element: <Heroes />,
 			},
 			{
 				path: '/heroes/:id',
-				element: <HeroData/>
-			}
-		]
-	}
+				element: <HeroData />,
+			},
+		],
+	},
 ]);
 
-export default router
+export default router;

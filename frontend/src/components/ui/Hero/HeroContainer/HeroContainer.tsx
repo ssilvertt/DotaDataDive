@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 const HeroContainer = styled('div').withConfig({
 	shouldForwardProp: prop => !['bg'].includes(prop),
 })<{ bg: string }>`

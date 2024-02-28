@@ -1,24 +1,8 @@
-
 import useHeroes from '@/utils/hooks/useHeroes.ts';
-import styled from 'styled-components';
-import HeroAttributeGrid from '../ui/Heroes/HeroAttributeGrid/HeroAttributeGrid.tsx';
-import HeroRow from '../ui/Heroes/HeroRow/HeroRow.tsx';
-import Spinner from '../ui/spinner.tsx';
-
-const BackgroundImageLink = styled.div`
-	&::before {
-		background-size: cover;
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/greyfade.jpg');
-		filter: blur(6px);
-		z-index: -1;
-	}
-`;
+import HeroAttributeGrid from '../../ui/Heroes/HeroAttributeGrid/HeroAttributeGrid.tsx';
+import HeroRow from '../../ui/Heroes/HeroRow/HeroRow.tsx';
+import Spinner from '../../ui/spinner.tsx';
+import './heroes.css'
 
 const Heroes = () => {
 	const { loading, error, heroes } = useHeroes();
@@ -34,7 +18,7 @@ const Heroes = () => {
 	}
 
 	return (
-		<BackgroundImageLink className=''>
+		<div id='backgroundImageLink'>
 			<div className='flex flex-shrink-0 flex-grow-1 flex-col pt-16'>
 				<div className='ml-auto mr-auto pl-4 pr-4 flex flex-col relative'>
 					<HeroRow>
@@ -63,7 +47,7 @@ const Heroes = () => {
 					</HeroRow>
 				</div>
 			</div>
-		</BackgroundImageLink>
+		</div>
 	);
 };
 

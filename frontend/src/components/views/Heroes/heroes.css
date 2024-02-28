@@ -1,0 +1,12 @@
+#backgroundImageLink::before {
+	background-size: cover;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/greyfade.jpg');
+	filter: blur(6px);
+	z-index: -1;
+}
