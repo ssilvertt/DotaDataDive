@@ -10,7 +10,7 @@ const authLink = setContext((_, { headers }) => {
 	return {
 		headers: {
 			...headers,
-			authorization: TOKEN ? `Bearer ${TOKEN}` : '',
+			authorization: import.meta.env.VITE_TOKEN ? `Bearer ${import.meta.env.VITE_TOKEN}` : '',
 		},
 	}
 })
