@@ -13,6 +13,11 @@ This project is developed using the following technologies:
 - GraphQL
 - Apollo
 
+
+## Project Demonstration
+
+![Main menu](https://github.com/ssilvertt/DotaDataDive/tree/main/frontend/public/meta-page)
+
 ## Installation & Configuration
 
 To install and run the project, follow these steps:
