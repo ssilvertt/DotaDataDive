@@ -16,7 +16,10 @@ This project is developed using the following technologies:
 
 ## Project Demonstration
 
-![Main menu](https://github.com/ssilvertt/DotaDataDive/tree/main/frontend/public/meta-page)
+![Main menu](https://github.com/ssilvertt/DotaDataDive/blob/main/frontend/public/meta-page.png)
+![Main menu with search](https://github.com/ssilvertt/DotaDataDive/blob/main/frontend/public/meta-page-sort.png)
+![Heroes page](https://github.com/ssilvertt/DotaDataDive/blob/main/frontend/public/heroes-page.png)
+![Hero page](https://github.com/ssilvertt/DotaDataDive/blob/main/frontend/public/hero-page.png)
 
 ## Installation & Configuration
 
